@@ -1,0 +1,209 @@
+userId,movieId,rating
+1,The Hunt for Red October,10.0
+1,The Big Bang Theory,8.0
+1,The Expanse,7.0
+1,Frozen,5.0
+1,Captain America: Civil War,3.0
+1,Terminator 2,9.0
+1,List do M.,7.0
+1,Forrest Gump,10.0
+1,Gran Torino,9.0
+1,Battleship,1.0
+1,Capitan Phillips,9.0
+1,Wyjazd integracyjny,1.0
+1,Narcos,10.0
+1,Ona,8.0
+1,The Devil Wears Prada,9.0
+1,Peaky Blinders,9.0
+2,Casino,9.0
+2,The Curious Case of Benjamin Button,8.0
+2,Shutter Island,9.5
+2,Jestem Bogiem,7.0
+2,The Dark Knight Trilogy,8.5
+2,Se7en,10.0
+2,The Departed,7.5
+2,The Godfather,8.0
+2,Super Zioło,6.0
+3,I Origins,9.0
+3,Vikings,7.0
+3,Kapitan Bomba,2.0
+3,Vicky Cristina Barcelona,7.0
+3,Her,8.0
+3,Gladiator,9.0
+3,The Lion King,9.0
+3,Eyes Wide Shut,7.0
+3,American Pie,3.0
+3,Memoirs of a Geisha,8.0
+3,"The good, the bad and the ugly",8.0
+3,Saw,3.0
+3,Loving Vincent,8.0
+3,Some Like It Hot,7.0
+3,Nigdy w życiu,7.0
+3,Top Gun,8.0
+4,Preacher,10.0
+4,Sherlock,10.0
+4,Peaky Blinders,10.0
+4,Firestarter,3.0
+4,Smile,9.0
+4,The Cuties,1.0
+4,Better Call Saul,9.0
+4,The End Of The F**ing World,8.0
+4,Joker,10.0
+4,Breaking Bad,10.0
+4,Truman Show,9.0
+4,Into The Spider Verse,10.0
+5,The Lord of the Rings: The Return of the King,10.0
+5,The Witcher,3.0
+5,Blade Runner 2049,9.0
+5,Forrest Gump,7.0
+5,Gladiator,8.0
+5,Captain America: Civil War,1.0
+5,Predator,8.0
+5,I Am Legend,7.0
+5,Overlord,9.0
+5,Avengers: Age of Ultron,2.0
+5,Stranger Things,4.0
+5,Pulp Fiction,8.0
+5,The Mandalorian,8.0
+5,Troy,7.0
+5,The Lion King,8.0
+5,Dzień świra,8.0
+6,Peaky Blinders,9.0
+6,War of the Worlds (2005),9.0
+6,Cast Away,9.0
+6,The Witcher,5.0
+6,Hellraiser,6.0
+6,Gladiator,8.0
+6,Blade Runner,7.0
+6,Breaking Bad,7.0
+6,Lobster,8.0
+6,Scott Pilgrim vs. the World,7.0
+6,IT,4.0
+6,Kill Bill,7.0
+6,Gravity,2.0
+6,Catch Me If You Can,8.0
+6,Joker,9.0
+6,Taboo,8.0
+7,Rick & Morty,8.0
+7,Star Wars,7.0
+7,The Matrix,9.0
+7,John Wick,10.0
+7,Wall-E,4.0
+7,Game of Thrones,4.0
+7,Rambo,5.0
+7,The Passion of the Christ,10.0
+7,Fantastic Beasts and Where to Find Them,8.0
+7,Spiderman,8.0
+7,Fight Club,9.0
+7,Constantine,6.0
+7,Lucy,5.0
+7,Community,7.0
+7,Fifty Shades of Grey,1.0
+7,Saving Private Ryan,10.0
+8,Limitless,8.0
+8,The Witcher,3.0
+8,Inception,8.0
+8,Blade Runner 2049,8.0
+8,Breaking Bad,10.0
+8,Parasite,10.0
+8,Cyberpunk: Edge Runners,9.0
+8,6 Underground,8.0
+8,Shaft,7.0
+8,50 Shades of grey,1.0
+8,Lucy,7.0
+8,The Equalizer,9.0
+8,Adam Project,7.0
+8,Spiderhead,4.0
+8,Red Notice,9.0
+8,Fight Club,10.0
+9,Pulp Fiction,10.0
+9,Chłopaki nie płaczą,8.0
+9,Interstellar,9.0
+9,The Witcher,4.0
+9,Inception,10.0
+9,Kapitan Bomba,1.0
+9,Shrek 2,10.0
+9,The Boys,7.0
+9,Rubber,3.0
+9,John Wick,6.0
+9,"Miłość, seks & pandemia",1.0
+9,Polityka,1.0
+9,Pitbull. Niebezpieczne kobiety,1.0
+9,Her,7.0
+9,Avatar 2,6.0
+9,Captain America: Civil War,5.0
+10,The Shawshank Redemption,7.0
+10,The Green Mile,7.0
+10,Forrest Gump,6.0
+10,The Matrix,10.0
+10,Bridget Jones's Diary,10.0
+10,Terminator 2,10.0
+10,Fight Club,10.0
+10,The Office,10.0
+10,The Irishman,4.0
+10,Peaky Blinders,6.0
+10,Deadpool,4.0
+10,The Matrix Resurrections,3.0
+10,Gladiator,6.0
+10,Joker,10.0
+10,Zodiac,8.0
+10,Inception,7.0
+11,Interstellar,9.0
+11,Dark,10.0
+11,The Shawshank Redemption,9.0
+11,Arcane,9.0
+11,Cyberpunk: Edge Runners,8.0
+11,Narcos,7.0
+11,Lucifer,6.0
+11,Final Destination 4,2.0
+11,Gangster,8.0
+11,American Gangster,8.0
+11,Constantine,7.0
+11,Squid Game ,6.0
+11,Django,7.0
+11,Mindhunter,8.0
+11,Fight Club,8.0
+11,Zodiac,7.0
+12,Forest Gump,10.0
+12,Hobbit,8.0
+12,Cloud Atlas,10.0
+12,Harry Potter,2.0
+12,The Passion of the Christ,10.0
+12,Gladiator,9.0
+12,Jurassic Park,6.0
+12,World War Z,2.0
+12,Public Enemies,7.0
+12,The Shawshank Redemption,9.0
+12,Django,7.0
+13,Kapitan Bomba,10.0
+13,Chłopaki nie płaczą,9.0
+13,House of Cards,10.0
+13,Oppenheimer,9.0
+13,Lucifer,7.0
+13,The Age of Adaline,4.0
+13,Pacific Rim: Uprising,2.0
+13,Sherlock Holmes: A Game of Shadows,10.0
+13,The Boys,8.0
+13,The Last of Us,5.0
+13,Extraction,9.0
+13,Secret Invasion,2.0
+13,Star Wars the Clone Wars,10.0
+13,Prince of Persia,7.0
+13,Ahsoka,8.0
+13,The Mandalorian,9.0
+14,The Shawshank Redemption,8.0
+14,Pulp Fiction,9.0
+14,The Dark Knight Trilogy,7.0
+14,Schindler's List,8.0
+14,Star Wars,9.0
+14,The Matrix,7.0
+14,Titanic,7.0
+14,The Big Lebowski,8.0
+14,Raiders of the Lost Ark,8.0
+14,The Silence of the Lambs,8.0
+14,Psycho,9.0
+14,Battleship,2.0
+14,Once Upon a Time in Hollywood,7.0
+14,Wyjazd integracyjny,1.0
+14,Stranger Things,6.0
+14,Blade Runner,9.0
