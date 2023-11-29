@@ -6,3 +6,5 @@ scikit-learn
 ipykernel
 openpyxl
 scikit-surprise
+tensorflow
+scikit-image
