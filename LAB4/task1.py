@@ -9,14 +9,14 @@ import warnings
 warnings.simplefilter("ignore")
 
 
-class AbaloneClassifier:
+class GrainClassifier:
     """
-    AbaloneClassifier class for processing and preparing data.
+    GrainClassifier class for processing and preparing data.
     """
 
     def __init__(self, file_path):
         """
-        Constructor to initialize the AbaloneClassifier.
+        Constructor to initialize the GrainClassifier.
 
         Parameters:
         - file_path (str): Path to the CSV file containing data.
@@ -32,24 +32,36 @@ class AbaloneClassifier:
 
     def preprocess_data(self):
         """
-        Preprocess the data by encoding 'sex' column, splitting, and scaling.
+        Preprocess the data by encoding 'Class' column, handling missing values, splitting, and scaling.
         """
-        self.label_encode_sex()
+        print("Preprocessing data...")
+        self.handle_missing_values()
+        self.label_encode_class()
         self.split_data()
         self.scale_data()
 
-    def label_encode_sex(self):
+    def handle_missing_values(self):
         """
-        Label encode the 'sex' column.
+        Handle missing values in the dataset.
         """
-        self.df['sex'] = self.label_encoder.fit_transform(self.df['sex'])
+        print("Handling missing values...")
+        # You can replace missing values with a strategy suitable for your data
+        self.df.fillna(self.df.mean(), inplace=True)
+
+    def label_encode_class(self):
+        """
+        Label encode the 'Class' column.
+        """
+        print("Label encoding 'Class' column...")
+        self.df['Class'] = self.label_encoder.fit_transform(self.df['Class'])
 
     def split_data(self):
         """
         Split the data into training and testing sets.
         """
-        X = self.df.drop('rings', axis=1)
-        y = self.df['rings']
+        print("Splitting data into training and testing sets...")
+        X = self.df.drop('Class', axis=1)
+        y = self.df['Class']
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             X, y, test_size=0.2, random_state=42
         )
@@ -58,13 +70,14 @@ class AbaloneClassifier:
         """
         Scale the features using StandardScaler.
         """
+        print("Scaling features using StandardScaler...")
         self.X_train = self.scaler.fit_transform(self.X_train)
         self.X_test = self.scaler.transform(self.X_test)
 
 
-class SVMClassifierClass(AbaloneClassifier):
+class SVMClassifierClass(GrainClassifier):
     """
-    SVMClassifierClass extends AbaloneClassifier for SVM model.
+    SVMClassifierClass extends GrainClassifier for SVM model.
     """
 
     def __init__(self, file_path):
@@ -82,6 +95,7 @@ class SVMClassifierClass(AbaloneClassifier):
         """
         Tune hyperparameters using GridSearchCV.
         """
+        print("Tuning hyperparameters for SVM using GridSearchCV...")
         param_grid = {
             'C': [0.1, 1, 10, 100],
             'kernel': ['linear', 'rbf'],
@@ -97,6 +111,7 @@ class SVMClassifierClass(AbaloneClassifier):
         """
         Train the SVM model using the best hyperparameters.
         """
+        print("Training SVM model using the best hyperparameters...")
         self.model = SVC(**self.best_params)
         self.model.fit(self.X_train, self.y_train)
 
@@ -104,6 +119,7 @@ class SVMClassifierClass(AbaloneClassifier):
         """
         Evaluate and print the performance of the SVM model.
         """
+        print("Evaluating SVM model...")
         y_pred = self.model.predict(self.X_test)
         accuracy = accuracy_score(self.y_test, y_pred)
         conf_matrix = confusion_matrix(self.y_test, y_pred)
@@ -115,9 +131,9 @@ class SVMClassifierClass(AbaloneClassifier):
         print("Classification Report:\n", class_report)
 
 
-class DecisionTreeClassifierClass(AbaloneClassifier):
+class DecisionTreeClassifierClass(GrainClassifier):
     """
-    DecisionTreeClassifierClass extends AbaloneClassifier for Decision Tree model.
+    DecisionTreeClassifierClass extends GrainClassifier for Decision Tree model.
     """
 
     def __init__(self, file_path):
@@ -135,10 +151,11 @@ class DecisionTreeClassifierClass(AbaloneClassifier):
         """
         Tune hyperparameters using GridSearchCV.
         """
+        print("Tuning hyperparameters for Decision Tree using GridSearchCV...")
         param_grid = {
             'criterion': ['gini', 'entropy'],
             'splitter': ['best', 'random'],
-            'max_depth': [None, 10, 20, 30],
+            'max_depth': [None, 10, 20, 30, 40, 50],
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [1, 2, 4],
         }
@@ -152,6 +169,7 @@ class DecisionTreeClassifierClass(AbaloneClassifier):
         """
         Train the Decision Tree model using the best hyperparameters.
         """
+        print("Training Decision Tree model using the best hyperparameters...")
         self.model = DecisionTreeClassifier(**self.best_params)
         self.model.fit(self.X_train, self.y_train)
 
@@ -159,6 +177,7 @@ class DecisionTreeClassifierClass(AbaloneClassifier):
         """
         Evaluate and print the performance of the Decision Tree model.
         """
+        print("Evaluating Decision Tree model...")
         y_pred = self.model.predict(self.X_test)
         accuracy = accuracy_score(self.y_test, y_pred)
         conf_matrix = confusion_matrix(self.y_test, y_pred)
@@ -172,19 +191,26 @@ class DecisionTreeClassifierClass(AbaloneClassifier):
 
 def main():
     """
-    Main function to create and evaluate SVM and Decision Tree models on Abalone dataset.
+    Main function to demonstrate the workflow of the classifiers.
     """
-    abalone_svm = SVMClassifierClass('data/abalone.csv')
-    abalone_svm.preprocess_data()
-    abalone_svm.tune_hyperparameters()
-    abalone_svm.train_model()
-    abalone_svm.evaluate_model()
+    print("Starting the main function...")
+    use_svm = False  # Set to True for SVM, False for Decision Tree
 
-    abalone_dt = DecisionTreeClassifierClass('data/abalone.csv')
-    abalone_dt.preprocess_data()
-    abalone_dt.tune_hyperparameters()
-    abalone_dt.train_model()
-    abalone_dt.evaluate_model()
+    if use_svm:
+        print("Creating SVM classifier...")
+        grain_model = SVMClassifierClass('data/wheat.csv')
+    else:
+        print("Creating Decision Tree classifier...")
+        grain_model = DecisionTreeClassifierClass('data/wheat.csv')
+
+    print("Preprocessing data...")
+    grain_model.preprocess_data()
+    print("Tuning hyperparameters...")
+    grain_model.tune_hyperparameters()
+    print("Training model...")
+    grain_model.train_model()
+    print("Evaluating model...")
+    grain_model.evaluate_model()
 
 
 if __name__ == "__main__":
