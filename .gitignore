@@ -41,3 +41,5 @@ coverage.xml
 *.cover
 *.
 env
+LAB5/data/Animals
+.DS_Store

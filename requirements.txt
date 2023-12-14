@@ -8,3 +8,4 @@ openpyxl
 scikit-surprise
 tensorflow
 scikit-image
+keras
