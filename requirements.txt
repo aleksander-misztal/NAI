@@ -5,7 +5,9 @@ matplotlib
 scikit-learn
 ipykernel
 openpyxl
-scikit-surprise
+# scikit-surprise
 tensorflow
 scikit-image
 keras
+opencv-python
+pygame
