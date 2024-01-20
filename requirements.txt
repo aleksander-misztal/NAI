@@ -12,3 +12,7 @@ keras
 opencv-python
 pygame
 mediapipe
+gym
+stable-baselines3
+neat-python
+pygame
